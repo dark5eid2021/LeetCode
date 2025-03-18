@@ -3,6 +3,7 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 
 """
 
+from typing import Optional
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

@@ -7,6 +7,7 @@ When we come back to the parent node we swap it's Left subtree and Right subtree
 
 
 """
+from typing import Optional
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

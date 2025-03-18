@@ -7,6 +7,8 @@ Return true if the edges of the given graph make up a valid tree, and false othe
 
 
 """
+from collections import defaultdict
+from typing import Optional
 
 class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:

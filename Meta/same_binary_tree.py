@@ -4,7 +4,7 @@ Two binary trees are considered the same if they are structurally identical,
 and the nnodes have the same value.
 
 """
-
+from typing import Optional
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

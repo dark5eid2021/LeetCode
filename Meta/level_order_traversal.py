@@ -2,6 +2,8 @@
 
 
 """
+from typing import Optional
+from collections import deque
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,7 +12,7 @@ class TreeNode:
         self.left = left
 
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
 

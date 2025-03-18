@@ -11,6 +11,10 @@ The right child is one column right of its parent
               
                   5 7
 '''
+from typing import Optional
+
+
+
 class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
