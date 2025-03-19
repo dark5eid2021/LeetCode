@@ -7,6 +7,7 @@ Return true if the edges of the given graph make up a valid tree, and false othe
 
 
 """
+import collections
 from collections import defaultdict
 from typing import Optional
 
