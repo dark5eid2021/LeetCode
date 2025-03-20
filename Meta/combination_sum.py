@@ -8,7 +8,7 @@ The test cases are generated such that the number of unique combinations that su
 
 """
 
-
+from typing import List
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         res = []

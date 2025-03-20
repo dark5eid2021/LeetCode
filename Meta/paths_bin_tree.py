@@ -6,6 +6,7 @@ A leaf is a node with no children.
 """
 
 from typing import Optional
+from typing import List
 
 class TreeNode:
     def __init__(self, val = 0, right = None, left = None):
