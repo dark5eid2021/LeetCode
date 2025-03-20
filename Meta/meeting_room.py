@@ -1,6 +1,10 @@
 """
-Given an array of meeting time intervals where intervals[i] = [starti, endi], determine if a person could attend all meetings.
+Given an array of meeting time intervals where intervals[i] = [starti, endi], 
+determine if a person could attend all meetings.
 """
+
+
+from typing import List
 
 class Solution:
     def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
