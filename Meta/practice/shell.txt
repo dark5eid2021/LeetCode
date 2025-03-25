@@ -1,0 +1,49 @@
+
+
+# Install PyInstaller
+pip install pyinstaller 
+
+# Navigate to the directory where mysh.py exists and run
+pyinstaller --onefile mysh.py
+
+# Run your shell
+./dist/mysh
+
+# What gets created:
+# dist/mysh – the actual executable
+# build/ – temporary build files
+# mysh.spec – config file PyInstaller uses
+# You can delete build/ and mysh.spec if you don’t need them
+
+# if you are on Linux/MacOS and want to treat it like a "real" shell:
+sudo cp dist/mysh /usr/local/bin/mysh
+chmod +x /usr/local/bin/mysh
+
+
+# now you can run it from anywhere with:
+mysh 
+
+
+
+# Heads-Up
+# If your shell depends on Python modules not in the standard library, make sure they're installed, or include them with the build.
+# PyInstaller bundles the Python interpreter too, which makes the --onefile output large (~10–20MB).
+
+
+# create logo/icon (MacOS)
+# 1. Create an .icns file 
+# 2. Use an online tool like cloudconvert.com or use MacOS's built-in iconutil:
+
+# 3. Prepare icon folder
+mkdir mysh.iconset
+sips -z 16 16     icon.png --out mysh.iconset/icon_16x16.png
+sips -z 32 32     icon.png --out mysh.iconset/icon_16x16@2x.png
+sips -z 128 128   icon.png --out mysh.iconset/icon_128x128.png
+# ... more sizes if needed
+iconutil -c icns mysh.iconset
+
+# Now you'll have mysh.icns 
+# Build with icon
+pyinstaller --onefile --windowed --icon=mysh.icns mysh.py
+
+# Use --windowed to avoid opening a terminal window when double-clicked (great for GUIs — optional here).
