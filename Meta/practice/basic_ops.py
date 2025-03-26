@@ -1,6 +1,7 @@
 # Append
-my_list = [1, 2, 3]
-my_list.append(4)
+my_list = [1, 2, 3, 5, 7, 9]
+# my_list.append(4)
+my_list.remove(1)
 print(my_list)
 
 # dictionary
@@ -8,11 +9,12 @@ dictionary = {'name': 'Alice', 'age': 25}
 # add
 dictionary['city'] = 'New York'
 # remove
-del dictionary['age']
+# del dictionary['age']
 
+print(dictionary)
 # loop
-for key, value in dictionary.items():
-    print(key, value)
+# for key, value in dictionary.items():
+#     print(key, value)
 
 
 # Tuple
