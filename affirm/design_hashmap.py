@@ -90,7 +90,7 @@ class MyHashMap:
         Steps:
         1. Find appropriate bucket using hash function
         2. Search bucket for key
-        3. Remove if found
+        3. Return if found
         """
 
         bucket_index = self._hash(key)
@@ -118,7 +118,7 @@ class MyHashMap:
         for i, (k, v) in enumerate(bucket):
             if k == key:
                 bucket.pop(i)
-                self.size -= -1
+                self.size -= 1
                 return
     
     def get_load_factor(self):
@@ -180,6 +180,34 @@ if __name__ == "__main__":
     test_load_factor_and_resize()
 
 
+
+
+# if __name__ == "__main__":
+#     hm = MyHashMap()
+
+#     print("Putting key=1, value=10")
+#     hm.put(1, 10)
+
+#     print("Putting key=2, value=20")
+#     hm.put(2, 20)
+
+#     print("Getting key=1:", hm.get(1))  # Should print 10
+#     print("Getting key=2:", hm.get(2))  # Should print 20
+#     print("Getting key=3 (not present):", hm.get(3))  # Should print -1
+
+#     print("Removing key=1")
+#     hm.remove(1)
+
+#     print("Getting key=1 after removal:", hm.get(1))  # Should print -1
+
+#     print("Current load factor:", hm.get_load_factor())  # Should reflect 1/1000
+
+#     print("Putting many keys to trigger resize...")
+#     for i in range(800):
+#         hm.put(i + 1000, i)
+
+#     print("Load factor after inserts:", hm.get_load_factor())
+#     print("Bucket count after resize:", hm.bucket_count)
 
 # Interview talking points:
 """
@@ -246,3 +274,5 @@ This problem tests:
 - System design thinking (load balancing, resizing)
 - Code organization and modularity
 """
+
+
