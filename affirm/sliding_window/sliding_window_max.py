@@ -15,7 +15,7 @@ from typing import List
 
 
 
-def max_sliding_winndow(nums: List[int], k:int) -> List[int]:
+def max_sliding_window(nums: List[int], k:int) -> List[int]:
     """
     Optimal solution using monotonic deque*.
 
