@@ -54,3 +54,12 @@ def max_sliding_window(nums: List[int], k:int) -> List[int]:
             result.append(nums[deq[0]])
     
     return result 
+
+
+"""
+Monotonic deque - specialized double-ended queue (deque) that maintains its elements in a strictly increasing or
+    decreasing order
+
+Deque invariants - a set of constraints that must always be true for a deque data structure, both before and
+    after any operation on it
+"""
